@@ -1,0 +1,4 @@
+# Exclude PDF originals and legacy files (PNGs are used for web)
+static/images/*.pdf
+static/images/figure0-legacy.png
+.DS_Store

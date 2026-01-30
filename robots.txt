@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seochan99.github.io/i2i-demographic-bias/sitemap.xml

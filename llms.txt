@@ -1,0 +1,44 @@
+# Evaluating Demographic Misrepresentation in Image-to-Image Portrait Editing
+
+> Paper by Huichan Seo, Minki Hong, Sieun Choi, Jihie Kim, Jean Oh (Carnegie Mellon University, Dongguk University)
+> arXiv: https://arxiv.org/abs/2602.16149
+> Project Page: https://seochan99.github.io/i2i-demographic-bias/
+
+## Summary
+
+This paper exposes demographic-conditioned failures in instruction-guided image-to-image (I2I) portrait editing. We formalize two failure modes — Soft Erasure and Stereotype Replacement — and show that identical edit instructions yield systematically different outcomes across subject demographics.
+
+## Key Findings
+
+- **Pervasive skin lightening**: 62–71% of all edited outputs exhibit lighter skin tones. Indian and Black subjects experience 72–75% vs. 44% for White subjects.
+- **Asymmetric identity drift**: Indian subjects experience 14% race change vs. only 1% for White subjects across all three models.
+- **Gender-occupation bias**: Models follow occupational stereotypes in 84–86% of cases, overriding source gender with occupation-driven priors.
+- **Prompt-level mitigation**: Feature prompts reduce race change by 1.48 points for Black subjects but only 0.06 for White subjects without model modification, revealing a "default to White" prior.
+
+## Failure Modes Defined
+
+- **Soft Erasure**: The editor silently suppresses or weakens the requested edit, yielding unchanged or minimally altered results despite producing an output image.
+- **Stereotype Replacement**: Edits introduce stereotype-consistent demographic attributes not specified in the prompt — skin lightening, race change, or gender inference driven by occupational priors.
+
+## Methodology
+
+- Controlled benchmark from 84 FairFace portraits (race × gender × age), 20 diagnostic prompts, 3 open-weight I2I editors (FLUX.2-dev, Step1X-Edit, Qwen-Image-Edit)
+- 5,040 edited images evaluated by dual-VLM ensemble (Gemini 3.0 Flash + GPT-5-mini) and 30 human annotators on Prolific
+- Feature prompt mitigation: prepend identity-preserving constraints without model updates
+
+## Models Evaluated
+
+- FLUX.2-dev (Black Forest Labs)
+- Step1X-Edit-v1p2 (StepFun)
+- Qwen-Image-Edit-2511 (Alibaba)
+
+## Citation
+
+```bibtex
+@article{seo2026demographic,
+  title={Evaluating Demographic Misrepresentation in Image-to-Image Portrait Editing},
+  author={Seo, Huichan and Hong, Minki and Choi, Sieun and Kim, Jihie and Oh, Jean},
+  journal={arXiv preprint arXiv:2602.16149},
+  year={2026}
+}
+```

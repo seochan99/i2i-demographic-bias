@@ -21,7 +21,7 @@
 | Resource | Status |
 |----------|--------|
 | [Project Page](https://seochan99.github.io/i2i-demographic-bias/) | Available |
-| arXiv | Coming Soon |
+| [arXiv](https://arxiv.org/abs/2602.16149) | Available |
 | Code & Data | Coming Soon |
 | Hugging Face | Coming Soon |
 
@@ -31,7 +31,7 @@
 @article{seo2026demographic,
   title={Evaluating Demographic Misrepresentation in Image-to-Image Portrait Editing},
   author={Seo, Huichan and Hong, Minki and Choi, Sieun and Kim, Jihie and Oh, Jean},
-  journal={arXiv preprint},
+  journal={arXiv preprint arXiv:2602.16149},
   year={2026}
 }
 ```

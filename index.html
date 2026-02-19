@@ -36,15 +36,19 @@
   <meta name="twitter:image" content="https://seochan99.github.io/i2i-demographic-bias/static/images/figure0.png">
   <meta name="twitter:image:alt" content="Qualitative examples of demographic-conditioned failures in I2I editing.">
 
-  <!-- Academic/Research Specific -->
+  <!-- Academic/Research Specific (Google Scholar Highwire Press tags) -->
   <meta name="citation_title" content="Evaluating Demographic Misrepresentation in Image-to-Image Portrait Editing">
   <meta name="citation_author" content="Seo, Huichan">
   <meta name="citation_author" content="Hong, Minki">
   <meta name="citation_author" content="Choi, Sieun">
   <meta name="citation_author" content="Kim, Jihie">
   <meta name="citation_author" content="Oh, Jean">
-  <meta name="citation_publication_date" content="2026">
-  <meta name="citation_conference_title" content="Preprint">
+  <meta name="citation_publication_date" content="2026/01/30">
+  <meta name="citation_journal_title" content="arXiv preprint arXiv:2602.16149">
+  <meta name="citation_arxiv_id" content="2602.16149">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2602.16149">
+  <meta name="citation_abstract_html_url" content="https://seochan99.github.io/i2i-demographic-bias/">
+  <meta name="citation_language" content="en">
 
   <!-- Additional SEO -->
   <meta name="theme-color" content="#0d9488">
@@ -88,25 +92,77 @@
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
 
-  <!-- Structured Data -->
+  <!-- Structured Data: ScholarlyArticle -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
+    "@id": "https://seochan99.github.io/i2i-demographic-bias/#article",
+    "mainEntityOfPage": "https://seochan99.github.io/i2i-demographic-bias/",
+    "url": "https://seochan99.github.io/i2i-demographic-bias/",
+    "sameAs": [
+      "https://arxiv.org/abs/2602.16149"
+    ],
     "headline": "Evaluating Demographic Misrepresentation in Image-to-Image Portrait Editing",
     "description": "We expose demographic-conditioned failures in I2I portrait editing—Soft Erasure and Stereotype Replacement—and propose a prompt-level identity-preserving mitigation.",
+    "abstract": "Demographic bias in text-to-image (T2I) generation is well studied, yet demographic-conditioned failures in instruction-guided image-to-image (I2I) editing remain underexplored. We examine whether identical edit instructions yield systematically different outcomes across subject demographics in open-weight I2I editors. We formalize two failure modes: Soft Erasure, where edits are silently weakened or ignored in the output image, and Stereotype Replacement, where edits introduce unrequested, stereotype-consistent attributes. We introduce a controlled benchmark that probes demographic-conditioned behavior by generating and editing portraits conditioned on race, gender, and age using a diagnostic prompt set, and evaluate multiple editors with vision-language model (VLM) scoring and human evaluation. Our analysis shows that identity preservation failures are pervasive, demographically uneven, and shaped by implicit social priors, including occupation-driven gender inference. Finally, we demonstrate that a prompt-level identity constraint, without model updates, can substantially reduce demographic change for minority groups while leaving majority-group portraits largely unchanged, revealing asymmetric identity priors in current editors.",
+    "image": "https://seochan99.github.io/i2i-demographic-bias/static/images/figure0.png",
     "author": [
-      {"@type": "Person", "name": "Huichan Seo", "affiliation": {"@type": "Organization", "name": "Carnegie Mellon University"}},
-      {"@type": "Person", "name": "Minki Hong", "affiliation": {"@type": "Organization", "name": "Dongguk University"}},
-      {"@type": "Person", "name": "Sieun Choi", "affiliation": {"@type": "Organization", "name": "Dongguk University"}},
-      {"@type": "Person", "name": "Jihie Kim", "affiliation": {"@type": "Organization", "name": "Dongguk University"}},
-      {"@type": "Person", "name": "Jean Oh", "affiliation": {"@type": "Organization", "name": "Carnegie Mellon University"}}
+      {"@type": "Person", "name": "Huichan Seo", "url": "https://huichanseo.com/", "affiliation": {"@type": "Organization", "name": "Carnegie Mellon University"}},
+      {"@type": "Person", "name": "Minki Hong", "url": "https://bk123477.github.io/", "affiliation": {"@type": "Organization", "name": "Dongguk University"}},
+      {"@type": "Person", "name": "Sieun Choi", "url": "https://linkedin.com/in/sieunchoi/", "affiliation": {"@type": "Organization", "name": "Dongguk University"}},
+      {"@type": "Person", "name": "Jihie Kim", "url": "https://sites.google.com/view/jihiekim/", "affiliation": {"@type": "Organization", "name": "Dongguk University"}},
+      {"@type": "Person", "name": "Jean Oh", "url": "https://www.cs.cmu.edu/~jeanoh/", "affiliation": {"@type": "Organization", "name": "Carnegie Mellon University"}}
     ],
     "datePublished": "2026-01-30",
+    "dateModified": "2026-02-19",
     "publisher": {"@type": "Organization", "name": "arXiv"},
-    "keywords": ["demographic bias", "image-to-image editing", "portrait editing", "soft erasure", "stereotype replacement", "identity preservation"],
+    "inLanguage": "en",
+    "keywords": ["demographic bias", "image-to-image editing", "portrait editing", "soft erasure", "stereotype replacement", "identity preservation", "AI fairness", "responsible AI"],
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/"
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage (AEO - helps AI engines cite this work) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Soft Erasure in image-to-image editing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Soft Erasure is a demographic-conditioned failure mode in I2I portrait editing where the editor silently suppresses or weakens the requested edit, yielding unchanged or minimally altered results despite producing an output image. It disproportionately affects non-White subjects, with 62-71% of all edited outputs exhibiting lighter skin tones than the source."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Stereotype Replacement in AI image editing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Stereotype Replacement is a failure mode where I2I edits introduce stereotype-consistent demographic attributes not specified in the prompt, such as skin lightening, race change, or gender inference driven by occupational priors. Models follow occupational stereotypes in 84-86% of cases, overriding source gender with occupation-driven priors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does demographic bias manifest in I2I portrait editing models?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Demographic bias in I2I portrait editing manifests as systematic skin lightening (Indian and Black subjects experience 72-75% skin lightening vs. 44% for White subjects), asymmetric identity drift where darker-skinned subjects experience more race change (14% for Indian vs. 1% for White), and gender-occupation stereotypes where models override source gender based on occupational priors in 84-86% of cases."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can demographic bias in I2I editing be mitigated without model retraining?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Feature prompts that prepend observable appearance attributes to edit instructions can reduce identity change without any model modification. This prompt-level mitigation reduces race change by 1.48 points for Black subjects but only 0.06 for White subjects, revealing a 'default to White' prior. The approach is model-agnostic and applicable to closed-source editors."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -132,14 +188,14 @@
         </button>
       </div>
       <div class="works-list">
-        <div class="work-item" style="opacity: 0.6; cursor: not-allowed;">
+        <a class="work-item" href="https://arxiv.org/abs/2602.16149" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
           <div class="work-info">
             <h5>arXiv Preprint</h5>
             <p>Full paper with methodology, results, and appendices.</p>
-            <span class="work-venue">arXiv - Coming Soon</span>
+            <span class="work-venue">arXiv 2602.16149</span>
           </div>
-          <i class="fas fa-lock"></i>
-        </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
         <div class="work-item" style="opacity: 0.6; cursor: not-allowed;">
           <div class="work-info">
             <h5>Code & Evaluation Assets</h5>
@@ -191,13 +247,13 @@
               <span class="eql-cntrb"><small><br><sup>*</sup>Equal contribution</small></span>
             </div>
             <div class="publication-links">
-              <span class="link-block has-tooltip has-tooltip-arrow has-tooltip-bottom" data-tooltip="Coming soon">
-                <button class="external-link button is-normal is-rounded is-dark is-disabled" disabled>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2602.16149" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
-                </button>
+                </a>
               </span>
               <span class="link-block has-tooltip has-tooltip-arrow has-tooltip-bottom" data-tooltip="Coming soon">
                 <button class="external-link button is-normal is-rounded is-dark is-disabled" disabled>
@@ -647,7 +703,7 @@
       <pre id="bibtex-code"><code>@article{seo2026demographic,
   title={Evaluating Demographic Misrepresentation in Image-to-Image Portrait Editing},
   author={Seo, Huichan and Hong, Minki and Choi, Sieun and Kim, Jihie and Oh, Jean},
-  journal={arXiv preprint},
+  journal={arXiv preprint arXiv:2602.16149},
   year={2026}
 }</code></pre>
     </div>
